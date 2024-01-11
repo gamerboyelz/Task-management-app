@@ -12,6 +12,21 @@ formContainer.addEventListener("submit", (e) => {
     formValidation()
 })
 
-let formValidation = () => {
+const formValidation = () => {
+    if (input.value == "" ) {
+        msg.innerHTML = "you cannot add ablank task" 
+        console.log("falure")  
+    }
+    if (input.value !== "") {
+        msg.innerHTML =""
+        console.log("success")
+        acceptData()
+    }
     
+}
+let data = {}
+
+const acceptData = ()=>{
+    data["text"] = input.value
+    console.log (data)
 }
